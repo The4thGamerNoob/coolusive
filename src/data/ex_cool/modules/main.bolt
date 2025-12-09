@@ -1,0 +1,13 @@
+import ex_cool:custom_blocks as custom_blocks
+import ex_cool:custom_items as custom_items
+
+function ex_cool:load:
+    tellraw @a {"text": "Datapack Loaded!", "italic": true}
+    schedule ex_cool:block/mining_speed 3t
+
+function ex_cool:tick:
+    execute as @e[type=item_display,tag=ex_cool.custom_block] run function ex_cool:block/custom_block
+    execute as @e[type=glow_item_frame,tag=ex_cool.item_frame_block] run function ex_cool:block/item_frame_block
+
+append function_tag minecraft:load {"values":["ex_cool:load"]}
+append function_tag minecraft:tick {"values":["ex_cool:tick"]}

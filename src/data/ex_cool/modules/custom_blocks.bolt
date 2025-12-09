@@ -1,0 +1,25 @@
+custom_blocks_list = ["fyanite_ore"]
+
+function ex_cool:block/item_frame_block:
+    for custom_block in custom_blocks_list:
+        execute as @s[tag=f"ex_cool.{custom_block}"] at @s run function f"ex_cool:block/{custom_block}/place"
+
+function ex_cool:block/custom_block:
+    for custom_block in custom_blocks_list:
+        execute as @s[tag=f"ex_cool.{custom_block}"] at @s unless block ~ ~ ~ white_stained_glass run function f"ex_cool:block/{custom_block}/break"
+
+function ex_cool:block/mining_speed:
+    execute as @a at @s if predicate ex_cool:fyanite_block run effect give @s mining_fatigue 1 1 true
+    schedule ex_cool:block/mining_speed 3t
+
+for custom_block in custom_blocks_list:
+    function f"ex_cool:block/{custom_block}/place":
+        setblock ~ ~ ~ white_stained_glass keep
+        execute if block ~ ~ ~ water run setblock ~ ~ ~ white_stained_glass
+        execute align y run summon item_display ~ ~ ~ {Tags:["ex_cool.custom_block",f"ex_cool.{custom_block}"],transformation:{left_rotation:{angle:0f,axis:[0f, 0f, 0f]},right_rotation:{angle:0f,axis:[0f, 0f, 0f]},translation:[0f,0.5f,0f],scale:[1.01f,1.01f,1.01f]},item:{id:"minecraft:item_frame",count:1,components:{item_model:f"in_cool:{custom_block}"}}}
+        kill @s
+
+    function f"ex_cool:block/{custom_block}/break":
+        kill @s
+        kill @n[type=item,nbt={OnGround:false,Age:0s}]
+        loot spawn ~ ~0.5 ~ loot f"ex_cool:block/{custom_block}"

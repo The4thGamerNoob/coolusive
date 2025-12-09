@@ -1,0 +1,23 @@
+{
+    "name": "coolusive",
+    "author": "The4thGamerNoob",
+    "data_pack": {
+        "load": ["src"],
+        "pack_format": 88,
+        "supported_formats": [80,88]
+    },
+    "resource_pack": {
+        "load": ["src"],
+        "description": "Adds custom textures/models.",
+        "pack_format": 69,
+        "supported_formats": [63,69]
+    },
+    "output": "build",
+
+    "require": ["bolt"],
+    "pipeline": ["mecha"],
+    "meta": {
+        "bolt": {
+            "entrypoint": ["ex_cool:main"]
+    }}
+}
