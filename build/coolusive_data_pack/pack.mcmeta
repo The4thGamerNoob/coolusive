@@ -1,0 +1,18 @@
+{
+  "pack": {
+    "min_format": [
+      88,
+      0
+    ],
+    "max_format": [
+      88,
+      0
+    ],
+    "description": "Author: The4thGamerNoob",
+    "pack_format": 88,
+    "supported_formats": [
+      80,
+      88
+    ]
+  }
+}

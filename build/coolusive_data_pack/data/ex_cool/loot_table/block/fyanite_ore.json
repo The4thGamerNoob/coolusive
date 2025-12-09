@@ -1,0 +1,27 @@
+{
+    "pools": [{
+        "rolls": 1,
+        "entries": [{
+            "type": "minecraft:item",
+            "name": "minecraft:glow_item_frame",
+            "functions": [{
+                "function": "minecraft:set_components",
+                "components": {
+                    "minecraft:item_name": {"text":"Fyanite Ore", "italic":false},
+                    "minecraft:item_model": "in_cool:fyanite_ore",
+                    "entity_data": {
+                        "id": "minecraft:glow_item_frame",
+                        "Tags": [
+                            "ex_cool.fyanite_ore",
+                            "ex_cool.item_frame_block"
+                        ],
+                        "Facing": 1,
+                        "Invulnerable": true,
+                        "Invisible": true,
+                        "Fixed": true
+                    }
+                }
+            }]
+        }]
+    }]
+}

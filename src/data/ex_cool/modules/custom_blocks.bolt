@@ -10,7 +10,7 @@ function ex_cool:block/custom_block:
 
 function ex_cool:block/mining_speed:
     execute as @a at @s if predicate ex_cool:fyanite_block run effect give @s mining_fatigue 1 1 true
-    schedule ex_cool:block/mining_speed 3t
+    schedule function ex_cool:block/mining_speed 3t
 
 for custom_block in custom_blocks_list:
     function f"ex_cool:block/{custom_block}/place":
