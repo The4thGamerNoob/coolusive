@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": "minecraft:gold_ingot"
+  },
+  "pattern": [
+    "X X",
+    "XXX",
+    "XXX"
+  ],
+  "result": {
+    "components": {
+      "minecraft:attribute_modifiers": [
+        {
+          "type": "minecraft:armor",
+          "id": "1765773580266",
+          "amount": 1,
+          "operation": "add_value"
+        },
+        {
+          "type": "minecraft:armor_toughness",
+          "id": "1765773580267",
+          "amount": 1,
+          "operation": "add_value"
+        }
+      ]
+    },
+    "count": 1,
+    "id": "minecraft:golden_chestplate"
+  }
+}
