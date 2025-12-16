@@ -1,6 +1,6 @@
 {
     "model": {
         "type": "minecraft:model",
-        "model": "inclusivecool:item/fyanite_ore"
+        "model": "in_cool:item/fyanite_ore"
     }
 }
